@@ -1,0 +1,12 @@
+<div class="inventory-deliver">
+    <h3 *ngIf="inventory.length == 0">No hay registros</h3>
+    <div *ngFor="let item of inventory" class="inventory-item">
+      <div [class.delivered]="item.Status === 'Delivered'">
+        <p><strong>{{ item.ProductName }}</strong></p>
+        <p>{{ item.SerialNumber }}</p>
+        <p *ngIf="item.Status === 'Delivered'" class="delivered-text">Entregado</p>
+        <button *ngIf="item.Status !== 'Delivered'" (click)="onDeliver(item.SerialNumber)">Entregar</button>
+      </div>
+    </div>
+  </div>
+  

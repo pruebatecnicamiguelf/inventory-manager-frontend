@@ -1,0 +1,44 @@
+.inventory-register {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80vw; 
+    margin: 0 auto; 
+  }
+  
+  h2 {
+    text-align: center;
+    color: #01579b;
+  }
+  
+  input, select, button {
+    width: 100%; 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #01579b;
+    border-radius: 4px;
+    box-sizing: border-box; 
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; 
+  }
+  
+  .input-group select,
+  .input-group input {
+    width: 100%; 
+    flex: 1; 
+  }
+  
+  button {
+    background-color: #0277bd;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #01579b;
+  }
+  

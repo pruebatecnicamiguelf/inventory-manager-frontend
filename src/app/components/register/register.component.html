@@ -1,0 +1,18 @@
+<div class="inventory-register">
+    <form (ngSubmit)="onSubmit()">
+        <input type="text" [(ngModel)]="inventoryData.username" name="username" placeholder="Nombre de usuario" required>
+      <div class="input-group">
+        <select [(ngModel)]="inventoryData.product_id" name="product_id" required>
+          <option value="" disabled selected style="text-align: center;">Productos</option>
+          <option *ngFor="let product of products" [value]="product.id">{{ product.name }}</option>
+        </select>
+      
+        <input type="text" [(ngModel)]="inventoryData.serial_number" name="serial_number" placeholder="Número de serie" required>
+      </div>
+  
+      <input type="text" [(ngModel)]="inventoryData.date" name="date" placeholder="dd/mm/aaaa" required>
+      
+      <button type="submit">Guardar y enviar</button>
+    </form>
+  </div>
+  
